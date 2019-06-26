@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start" routerLink="/scanqrcode" routerDirection="backward">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>วันที่เข้าเรียน</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+<ion-grid>
+              <ion-row>
+                  <ion-col>
+                    รหัสวิชา
+                  </ion-col>
+                  <ion-col>
+                    วิชา 
+                  </ion-col>
+                  <ion-col>
+                    วันเข้าเรียน
+                  </ion-col>
+                  <ion-col>
+                    เทอม
+                  </ion-col>
+                  <ion-col>
+                    ปี
+                  </ion-col>
+                </ion-row>
+          </ion-grid>
+         
+  
+  <!-- <ion-card>
+      <ion-card-header>
+          
+      </ion-card-header> -->
+  <ion-list>
+    <ion-item *ngFor ="let data of list">
+      <ion-label>{{data.course+" "+data.courseName+" "+data.create_date+" "+data.term+" "+data.year}}</ion-label>
+    </ion-item>
+  </ion-list>
+<!-- </ion-card> -->
+
+      
+</ion-content>

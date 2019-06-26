@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      สแกน QR โค้ด
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card class="welcome-card">
+        <ion-img  src="/assets/book/ninja.png"></ion-img>
+        <ion-card-header>
+          <ion-card-title align="center">เช็คชื่อผ่าน QR โค้ด </ion-card-title>
+        </ion-card-header>
+        <ion-item>
+            <ion-label>
+              ชื่อ {{name}}
+            </ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+              รหัสนักศึกษา {{username}}
+            </ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+
+        <!-- <ion-button >Default</ion-button> -->
+
+        
+          <ion-toolbar>
+            <ion-buttons slot="primary">
+              <ion-button (click)="clickedStar()">
+                <ion-icon slot="icon-only" ></ion-icon>
+              </ion-button>
+            </ion-buttons>
+            <ion-buttons slot="end">
+                <ion-button routerLink="/list" routerDirection="forward">ดูรายวิชาที่เข้าเรียน</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+          
+
+        <ion-card-content>
+          <div width1>
+              <ion-img src="/assets/book/qrcode.png"></ion-img>
+          </div>
+            <ion-col  class="center pt-20">         
+                <ion-button size="small" expand="block" fill="outline" (click)="scanCode()">
+                    <ion-icon slot="start" name="barcode" ></ion-icon>
+                     SCAN BARCODE  
+                     <p>{{scannedResult}}</p>
+                </ion-button>
+            </ion-col>  
+        </ion-card-content>
+      </ion-card>
+      <!-- <ion-button (click)="scanCode()">Scan Code</ion-button> -->
+      <p>{{scannedResult}}</p>
+
+      
+</ion-content>
